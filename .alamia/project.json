@@ -21,7 +21,7 @@
     "handoff_dir": ".ai/transient/handoffs",
     "architecture_dir": ".ai/permanent/architecture",
     "worklogs": [],
-    "latest_handoff_file": ".ai/transient/handoffs/02-session-handoff-portal-complete.md"
+    "latest_handoff_file": ".ai/transient/handoffs/03-session-handoff-accounts-deployment-and-perf.md"
   },
   "lifecycle": {
     "groups": [

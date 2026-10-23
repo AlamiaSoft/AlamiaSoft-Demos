@@ -32,9 +32,12 @@ The primary objective of this sprint is to initialize the multi-app demo hosting
 - [x] Initialized Git repository and linked `Alamia-Skills-System` submodule.
 - [x] Bootstrapped lifecycle skills (`bootstrap`, `implement`, `qa`, `architecture-review`, `session-end`).
 - [x] Codified ADR-0001, system architecture, standards, glossary, and dependency maps in `.ai/`.
-- [x] Implement Central Demo Portal application in `demos.alamiasoft.com/` (index.html, nginx.conf with noindex, Dockerfile, docker-compose.yml).
-- [x] Add Cloudflare Tunnel ingress configuration template (`ingress/cloudflare-tunnel.md`) for tunnel `alamiaconnect-vps-01` (`046f1c34-6e56-401a-b871-1a82238c4baf`).
-- [ ] Scaffold `stacks/accounts/` Docker Compose stack and deployment guide from `https://github.com/AlamiaSoft/AlamiaAccounts` for Mr. Muzaffar's demo.
+- [x] Implemented Central Demo Portal application in `demos.alamiasoft.com/` (index.html, nginx.conf with noindex, Dockerfile, docker-compose.yml).
+- [x] Deployed and verified Central Demo Portal live on VPS at `https://demos.alamiasoft.com`.
+- [x] Resolved Portainer deployment configuration for Alamia Accounts (standalone build, `/alamia-accounts` slug preserved, port 8101).
+- [x] Added `PHP_CLI_SERVER_WORKERS: 8` to eliminate 522 concurrency bottlenecks in Accounts backend.
+- [ ] Redeploy Alamia Accounts stack in Portainer and verify fast UI loading on `https://accounts-demo.alamiasoft.com/alamia-accounts`.
+- [ ] Verify test login and review synthetic financial ledgers for Mr. Muzaffar.
 
 ---
 
