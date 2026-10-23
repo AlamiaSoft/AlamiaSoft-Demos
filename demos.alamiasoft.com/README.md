@@ -12,13 +12,13 @@ cd demos.alamiasoft.com
 cp .env.example .env
 docker compose up -d --build
 ```
-The portal will be accessible locally at `http://localhost:8080` (or `PORTAL_PORT`).
+The portal will be accessible locally at `http://localhost:8090` (or `PORTAL_PORT`).
 
 ### Option 2: Deploy in Portainer CE
 1. In Portainer, go to **Stacks** > **Add stack**.
 2. Name the stack: `alamia-demo-portal`.
 3. Paste the contents of `docker-compose.yml` (or select Repository deployment).
-4. Set environment variable `PORTAL_PORT=8080`.
+4. (Optional) Set environment variable `PORTAL_PORT=8090` (or any free port).
 5. Click **Deploy the stack**.
 
 ---
@@ -27,4 +27,4 @@ The portal will be accessible locally at `http://localhost:8080` (or `PORTAL_POR
 In Cloudflare Zero Trust Dashboard > Networks > Tunnels > `alamiaconnect-vps-01` (`046f1c34-6e56-401a-b871-1a82238c4baf`):
 - **Public Hostname:** `demos.alamiasoft.com`
 - **Service:** `HTTP`
-- **URL:** `localhost:8080` (or `127.0.0.1:8080`)
+- **URL:** `localhost:8090` (or `127.0.0.1:8090`)

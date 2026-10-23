@@ -7,8 +7,8 @@ services:
     container_name: alamia-demo-portal
     restart: unless-stopped
     ports:
-      # Bind to localhost so cloudflared on host can route to http://localhost:8080
-      - "127.0.0.1:${PORTAL_PORT:-8080}:80"
+      # Bind to localhost so cloudflared on host can route to http://localhost:8090
+      - "127.0.0.1:${PORTAL_PORT:-8090}:80"
     deploy:
       resources:
         limits:

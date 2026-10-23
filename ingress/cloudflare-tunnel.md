@@ -14,10 +14,10 @@ To route public traffic to the internal Docker containers running on the VPS, co
 
 | Public Hostname | Service Type | URL / Destination | Target Stack / Container |
 | :--- | :--- | :--- | :--- |
-| `demos.alamiasoft.com` | `HTTP` | `localhost:8080` | `alamia-demo-portal` (Landing catalog) |
-| `accounts.demos.alamiasoft.com` | `HTTP` | `localhost:8081` | `alamia-demo-accounts-app` (Alamia Accounts Demo) |
-| `travelos.demos.alamiasoft.com` *(Phase 2)* | `HTTP` | `localhost:8082` | `alamia-demo-travelos-app` (TravelOS Demo) |
-| `connect.demos.alamiasoft.com` *(Phase 3)* | `HTTP` | `localhost:8083` | `alamia-demo-connect-app` (CRM Demo) |
+| `demos.alamiasoft.com` | `HTTP` | `localhost:8090` | `alamia-demo-portal` (Landing catalog) |
+| `accounts.demos.alamiasoft.com` | `HTTP` | `localhost:8091` | `alamia-demo-accounts-app` (Alamia Accounts Demo) |
+| `travelos.demos.alamiasoft.com` *(Phase 2)* | `HTTP` | `localhost:8092` | `alamia-demo-travelos-app` (TravelOS Demo) |
+| `connect.demos.alamiasoft.com` *(Phase 3)* | `HTTP` | `localhost:8093` | `alamia-demo-connect-app` (CRM Demo) |
 
 ---
 
@@ -32,25 +32,25 @@ credentials-file: /etc/cloudflared/046f1c34-6e56-401a-b871-1a82238c4baf.json
 ingress:
   # 1. Central Demos Portal
   - hostname: demos.alamiasoft.com
-    service: http://localhost:8080
+    service: http://localhost:8090
     originRequest:
       noTLSVerify: true
       connectTimeout: 10s
 
   # 2. Alamia Accounts Demo (Target: Mr. Muzaffar)
   - hostname: accounts.demos.alamiasoft.com
-    service: http://localhost:8081
+    service: http://localhost:8091
     originRequest:
       noTLSVerify: true
       connectTimeout: 15s
 
   # 3. TravelOS Demo (Future)
   - hostname: travelos.demos.alamiasoft.com
-    service: http://localhost:8082
+    service: http://localhost:8092
 
   # 4. AlamiaConnect CRM Demo (Future)
   - hostname: connect.demos.alamiasoft.com
-    service: http://localhost:8083
+    service: http://localhost:8093
 
   # Catch-all 404 rule (Required by cloudflared)
   - service: http_status:404
@@ -64,7 +64,7 @@ To avoid port collisions across independent stacks on the shared VPS:
 
 | Port | Service | Subdomain | Compose Stack Location |
 | :--- | :--- | :--- | :--- |
-| **8080** | Central Demo Portal | `demos.alamiasoft.com` | `demos.alamiasoft.com/` |
-| **8081** | Alamia Accounts Demo Web | `accounts.demos.alamiasoft.com` | `stacks/accounts/` |
-| **8082** | TravelOS Demo Web | `travelos.demos.alamiasoft.com` | `stacks/travelos/` |
-| **8083** | AlamiaConnect CRM Demo Web | `connect.demos.alamiasoft.com` | `stacks/connect/` |
+| **8090** | Central Demo Portal | `demos.alamiasoft.com` | `demos.alamiasoft.com/` |
+| **8091** | Alamia Accounts Demo Web | `accounts.demos.alamiasoft.com` | `stacks/accounts/` |
+| **8092** | TravelOS Demo Web | `travelos.demos.alamiasoft.com` | `stacks/travelos/` |
+| **8093** | AlamiaConnect CRM Demo Web | `connect.demos.alamiasoft.com` | `stacks/connect/` |
