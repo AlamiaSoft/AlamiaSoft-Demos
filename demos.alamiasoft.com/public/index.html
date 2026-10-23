@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlamiaSoft Demos Portal | Enterprise Software Sandbox</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="description" content="Central demonstration platform for AlamiaSoft software applications.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+              950: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-indigo {
+      box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.25);
+    }
+    .glow-card:hover {
+      box-shadow: 0 10px 40px -15px rgba(99, 102, 241, 0.3);
+    }
+    .badge-pulse::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col font-sans antialiased selection:bg-brand-500 selection:text-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.15),rgba(255,255,255,0))]">
+
+  <!-- Navigation Header -->
+  <header class="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center font-bold text-white text-lg shadow-md shadow-brand-500/20">
+          A
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-white tracking-tight flex items-center gap-2">
+            AlamiaSoft <span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono font-medium border border-slate-700/60">Demos Portal</span>
+          </span>
+          <span class="text-[10px] text-slate-400 font-mono">demos.alamiasoft.com</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          VPS Ingress Healthy
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono bg-slate-900 text-slate-400 border border-slate-800">
+          <svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          Noindex Active
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 w-full">
+    
+    <!-- Hero Section -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-950/80 border border-brand-800/60 text-brand-300 text-xs font-medium mb-6">
+        <svg class="w-4 h-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+        </svg>
+        Isolated Sandbox Environment
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight sm:leading-tight mb-4">
+        Explore AlamiaSoft Enterprise Solutions
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+        Live, interactive demonstration environments showcasing the Alamia software suite. Each demo runs in a fully isolated container stack with rich synthetic data fixtures.
+      </p>
+    </div>
+
+    <!-- Product Showcase Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+
+      <!-- Card 1: Alamia Accounts (Featured / Priority 1) -->
+      <div class="flex flex-col rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-900/50 border border-brand-500/40 p-6 sm:p-7 glow-card transition-all duration-300 relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl group-hover:bg-brand-500/20 transition-all"></div>
+        
+        <!-- Header & Badges -->
+        <div class="flex items-start justify-between mb-5">
+          <div class="h-12 w-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Evaluation Ready
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <h2 class="text-xl font-bold text-white group-hover:text-brand-300 transition-colors">Alamia Accounts</h2>
+          <p class="text-xs font-mono text-brand-400 mt-0.5">accounts.demos.alamiasoft.com</p>
+        </div>
+
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 flex-1">
+          Full-featured financial accounting suite equipped with multi-currency general ledger, dynamic Chart of Accounts, accounts payable/receivable, and automated financial statements.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">General Ledger</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Chart of Accounts</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Synthetic Ledgers</span>
+        </div>
+
+        <!-- Stakeholder Note -->
+        <div class="p-3 rounded-xl bg-brand-950/40 border border-brand-800/40 mb-6 text-xs text-brand-200 flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-brand-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div>
+            <span class="font-semibold text-white">Target Evaluation:</span> Dedicated evaluator tenant pre-seeded for Mr. Muzaffar.
+          </div>
+        </div>
+
+        <!-- Launch Button -->
+        <a href="https://accounts.demos.alamiasoft.com" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm flex items-center justify-center gap-2 shadow-lg shadow-brand-600/30 transition-all group-hover:scale-[1.01]">
+          <span>Launch Accounts Demo</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card 2: TravelOS (Phase 2) -->
+      <div class="flex flex-col rounded-2xl bg-slate-900/40 border border-slate-800/80 p-6 sm:p-7 relative overflow-hidden opacity-90">
+        <!-- Header & Badges -->
+        <div class="flex items-start justify-between mb-5">
+          <div class="h-12 w-12 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-center text-slate-400">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            In Preparation
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <h2 class="text-xl font-bold text-white">TravelOS</h2>
+          <p class="text-xs font-mono text-slate-500 mt-0.5">travelos.demos.alamiasoft.com</p>
+        </div>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+          Next-generation travel ERP and dynamic reservation engine. Manages multi-GDS flight bookings, hotel room inventories, complex tour itineraries, and automated supplier reconciliations.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Booking Engine</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Itineraries</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Multi-GDS</span>
+        </div>
+
+        <!-- Stakeholder Note -->
+        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 mb-6 text-xs text-slate-400 flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-slate-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div>
+            <span class="font-semibold text-slate-300">Phase 2:</span> Demo stack deployment in progress following Accounts evaluation.
+          </div>
+        </div>
+
+        <button disabled class="w-full py-2.5 px-4 rounded-xl bg-slate-800/60 text-slate-500 font-medium text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-slate-700/40">
+          <span>Deployment In Progress</span>
+        </button>
+      </div>
+
+      <!-- Card 3: AlamiaConnect CRM (Phase 3) -->
+      <div class="flex flex-col rounded-2xl bg-slate-900/40 border border-slate-800/80 p-6 sm:p-7 relative overflow-hidden opacity-90">
+        <!-- Header & Badges -->
+        <div class="flex items-start justify-between mb-5">
+          <div class="h-12 w-12 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-center text-slate-400">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-400 border border-slate-700">
+            Roadmap
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <h2 class="text-xl font-bold text-white">AlamiaConnect CRM</h2>
+          <p class="text-xs font-mono text-slate-500 mt-0.5">connect.demos.alamiasoft.com</p>
+        </div>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+          Omnichannel communications and customer relationship management platform. Integrates unified shared inboxes, WhatsApp Business API, deal pipelines, and automated client journeys.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Omnichannel Inbox</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Pipeline Stages</span>
+          <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-800/40 text-slate-400 border border-slate-800">Automations</span>
+        </div>
+
+        <!-- Stakeholder Note -->
+        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 mb-6 text-xs text-slate-400 flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-slate-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+          </svg>
+          <div>
+            <span class="font-semibold text-slate-300">Phase 3:</span> Subdomain reserved under central platform namespace.
+          </div>
+        </div>
+
+        <button disabled class="w-full py-2.5 px-4 rounded-xl bg-slate-800/60 text-slate-500 font-medium text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-slate-700/40">
+          <span>Scheduled</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Evaluator & Security Architecture Callout -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/90 text-sm">
+      <div class="flex gap-4">
+        <div class="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-white text-base mb-1">Total Stack Isolation</h3>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            Every product demo runs in an isolated Docker Compose stack with dedicated database containers and volumes. No cross-app database contamination.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <div class="h-10 w-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-white text-base mb-1">100% Synthetic Data</h3>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            All customer accounts, financial ledgers, and transactions are procedurally generated synthetic fixtures. Zero real business data is ever loaded.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <div class="h-10 w-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-white text-base mb-1">Stealth Ingress & Anti-Indexing</h3>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            Encrypted ingress via Cloudflare Tunnel (<code class="text-amber-300 font-mono text-[11px]">alamiaconnect-vps-01</code>). Strict HTTP <code class="text-amber-300 font-mono text-[11px]">noindex</code> headers keep search crawlers away.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold text-slate-400">AlamiaSoft Technologies</span>
+        <span>&bull;</span>
+        <span>Confidential Evaluation & Demo Environment</span>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-[11px]">
+        <span>Tunnel: alamiaconnect-vps-01</span>
+        <span>&bull;</span>
+        <span>Build: v1.0.0</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
