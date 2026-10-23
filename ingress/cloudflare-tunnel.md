@@ -15,7 +15,7 @@ To route public traffic to the internal Docker containers running on the VPS, co
 | Public Hostname | Service Type | URL / Destination | Target Stack / Container |
 | :--- | :--- | :--- | :--- |
 | `demos.alamiasoft.com` | `HTTP` | `localhost:8090` | `alamia-demo-portal` (Landing catalog) |
-| `accounts.demos.alamiasoft.com` | `HTTP` | `localhost:8091` | `alamia-demo-accounts-app` (Alamia Accounts Demo) |
+| `accounts-demo-backend.alamiasoft.com` | `HTTP` | `localhost:8101` | `alamia-backend` (Alamia Accounts Backend API) |
 | `travelos.demos.alamiasoft.com` *(Phase 2)* | `HTTP` | `localhost:8092` | `alamia-demo-travelos-app` (TravelOS Demo) |
 | `connect.demos.alamiasoft.com` *(Phase 3)* | `HTTP` | `localhost:8093` | `alamia-demo-connect-app` (CRM Demo) |
 
